@@ -82,3 +82,18 @@ Advanced aggregation functions: arg_min(), arg_max(), percentiles(), makelist(),
 ### render
 In ra kết quả theo dạng biểu đồ.
 
+### extend
+Thêm một cột dữ liệu vào
+
+```
+SecurityEvent
+| extend My_Calculation = 8*8
+| extend My_Fabricated_Data = "Yay for me!"
+```
+![image](https://user-images.githubusercontent.com/91442807/232989632-68fffd1b-832c-4d38-9a7d-0693fbcc959a.png)
+
+Note: cái quan trọng của lệnh này là nó kết hợp các dự liệu ta thu thập được và hiển thi nó dưới dạng một cột mới.
+
+### project
+Chọn đúng cần những gì cần hiển thị
+
