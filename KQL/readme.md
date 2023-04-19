@@ -36,4 +36,49 @@ SecurityEvent // The table
 | where AccountType =~ "user" // case insensitive
 ```
 
+### Take/limit
+
+```
+SecurityEvent // The table
+| where TimeGenerated > ago(1h) // Activity in the last hour
+| where EventID == 4624 // Successful logon
+| where AccountType =~ "user" // case insensitive
+| limit 10 //random data sample or 10 records
+```
+Giới hạn số kết quả in ra là 10.
+
+### count
+
+```
+SecurityEvent // The table
+| where TimeGenerated > ago(1h) // Activity in the last hour
+| where EventID == 4624 // Successful logon
+| where AccountType =~ "user" // case insensitive
+| count // Number of successful logons
+```
+
+Đếm số lượng account thỏa mãn các điều kiện trên.
+
+Note: thường chúng ta không quan tâm đến số lượng successful logon(4624) mà quan tâm đến successful logon(4625).
+
+### summarize
+
+
+```
+SecurityEvent // The input table
+| where TimeGenerated > ago(1h) // Activity in the last hour
+| where EventID == 4624 // Successful logon
+| summarize count() by AccountType, Computer //Show the number of successful logons per computer and what type of account is being used
+```
+
+```
+Tablename
+| summarize Aggregation [by Group Expression]
+
+Simple aggregation functions: count(), sum(), avg(), min(), max(),
+Advanced aggregation functions: arg_min(), arg_max(), percentiles(), makelist(), countif()
+```
+
+### render
+In ra kết quả theo dạng biểu đồ.
 
