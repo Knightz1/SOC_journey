@@ -97,7 +97,7 @@ Note: cái quan trọng của lệnh này là nó kết hợp các dự liệu t
 ### project
 Chọn đúng cần những gì cần hiển thị
 
-#### project-away
+- project-away
 ```
 Tablename 
 | project-away column1, column2, column3*
