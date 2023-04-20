@@ -39,7 +39,15 @@ Sơ đồ tấn công.
 
 
 ### 3. AS-REP Roasting
--Muốn thực hiện kiểu tấn công này, phải đạt được điều kiện cần thiết, đó là `Tài khoản không yêu cầu Kerberos pre-authentication`.
--Khi thuộc tính này được bật, bất kỳ ai cũng có thể gửi AS-REQ của người dùng trên và nhận được phản hồi AS-REP với phần mã hóa có thể bị bẻ khóa để đánh cắp mật khẩu.
-- Đồng nghĩa với việc không cần domain account để thực hiện tấn công, chỉ cần kết nối được đến DC. Tuy nhiên vẫn phải fuzzing được username của account.
+Muốn thực hiện kiểu tấn công này, phải đạt được điều kiện cần thiết, đó là `Tài khoản không yêu cầu Kerberos pre-authentication`.
+
+- Cái trường hợp mà bị tắt cái `pre-authentication` rất hiếm hầu như ko xảy ra nên cách tấn công này hầu như không được sử dụng.
+
+Dù sao trong trường hợp nó bị tắt:
+
+- Bất kì ai cũng có thể yêu cầu `TGT` dựa trên tên của một số tài khoản đã biết (fuzz hay gì đó...) và kết quả trả về `KRB_AS_REP` 
+
+![image](https://user-images.githubusercontent.com/91442807/233421281-e5afc358-ccf8-48f5-8957-fae957162b02.png)
+
+- Khi lấy được `KRB_AS_REP` thì attacker có thể lấy password của user dựa trên phần encrypt (bằng brute force,....)
 
