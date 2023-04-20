@@ -104,4 +104,32 @@ Tablename
 ```
 Hiển thị tất cả các cột ngoài tự các cột ở trên.
 
+### union
+Kết hợp thông tin các bảng với nhau.
+
+```
+SecurityEvent //the table
+| union Sec* //merging together all tables beginning with 'Sec'
+| summarize count() by Computer //showing all computers from all tables and how many times they are referenced
+| sort by Computer asc //displaying Computer names in ascending order
+```
+
+### join
+
+Dùng để kết hợp hàng của 2 bảng dựa trên các trường chung.
+
+Cú pháp:
+```
+LeftTable
+|join [JoinParameters] (RightTable) onAttributes
+```
+
+Ví dụ:
+```
+SecurityEvent //table name
+| join Heartbeat on Computer //joining SecurityEvent with Heartbeat on the common Computer column
+| where EventID == "4688" //Looking for Event ID for new process
+| project Computer, OSType, OSMajorVersion, Version //Displaying data from both table
+```
+
 
