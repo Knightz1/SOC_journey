@@ -1,26 +1,15 @@
-
-
-### KRB_AS_REQ
-Người dùng sẽ gửi một request để lấy `TGT` đến `KDC` thì request đó gọi là `KRB_AS_REQ`.
-
-- Các bước:
-
-Để yêu cầu lấy `TGT`, người dùng sẽ gửi `username`, `timestamp(thời gian lúc yêu cầu TGT)` mã hóa cùng với hash của password.
-KDC  sẽ xem `username` có nằm trong database hay không. Nếu có thì KDC sẽ lấy `hash password` để decrypt `timestamp`, nếu đúng thì nó sẽ tiến hành gửi `TGT` về cho user.
-
-### KRB_AS_REP
-Đây là quá trình `KDC` gửi `TGT` về lại cho user.
-
-`TGT` chứa các thông tin:
+## Phương phác xác thực Kerberos trong AD (Active Directory)
 ```
-Username 
-Validity period
-Generated session key
-The Privilege Attribute Certificate (PAC) which contains a lot of specific information about the user, including his identifier (SID) and all the groups he is member of.
+- Bước 1: User cấp username, password và domain name cho máy client.
+- Bước 2: Client tiến hành đóng gói thông tin thành 1 package hoặc có tên khác là ‘authenticator’, chứa các thông tin liên quan tới client, bao gồm username, ngày giờ (timestamp)… Ngoài username ra thì tất cả các info khác đều được mã hoá bằng password của người dùng.
+- Bước 3. Client gửi encrypted authenticator đó tới KDC (Key Distribution Center).
+- Bước 4. KDC check xem username nào đang gửi request tới, rồi nó lấy password của username đó đang được lưu trong databases, tiến hành decrypt thằng ‘authenticator’ với password đó. Nếu KDC có thể decrypt được thì danh tính của thằng user được xác minh là đúng.
+- Bước 5. Nếu verify thành công thì thằng KDC (cụ thể là AS – Authentication Server) sẽ tạo ra 1 ticket, nó cũng được encrypted và gửi lại về client (encrpyt bằng key của KRBTGT (key này chính là hash của password krbtgt user trên AD)), ticket đó được gọi là Ticket Granting Ticket (TGT).
+- Bước 6. Ticket sau khi nhận được lưu trữ trong Kerberos tray của client và được sử dụng để truy cập vào Server trong 1 thời gian nhất định (thường là 8 tiếng). Đến đây thì người dùng đã được xác thực trong domain.
 ```
 
-- TGT được encrypt cùng lúc với `KDC key`, do đó chỉ `KDC` mới có thể decrypt và đọc nội dung của `TGT`.
 
+## Các phương pháp tấn công 
 
 ### 1. Silver ticket
 
@@ -48,4 +37,9 @@ Sơ đồ tấn công.
 
 ![image](https://user-images.githubusercontent.com/91442807/233398079-152b9e09-4aa7-4444-ae35-f9e82897a8b4.png)
 
+
+### 3. AS-REP Roasting
+-Muốn thực hiện kiểu tấn công này, phải đạt được điều kiện cần thiết, đó là `Tài khoản không yêu cầu Kerberos pre-authentication`.
+-Khi thuộc tính này được bật, bất kỳ ai cũng có thể gửi AS-REQ của người dùng trên và nhận được phản hồi AS-REP với phần mã hóa có thể bị bẻ khóa để đánh cắp mật khẩu.
+- Đồng nghĩa với việc không cần domain account để thực hiện tấn công, chỉ cần kết nối được đến DC. Tuy nhiên vẫn phải fuzzing được username của account.
 
