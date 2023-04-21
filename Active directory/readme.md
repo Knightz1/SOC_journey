@@ -28,8 +28,10 @@ Sơ đồ mô tả cách tấn công:
 ```
 Ticket Encryption type = 0x17 
 Ticket options = 0x40810000
+
+-> Write a rule to match ( RC4 encryption + Event ID 4769 + New User Names In domains + Login Frequency ) 
 ```
-![image](https://user-images.githubusercontent.com/91442807/233650263-3f229438-03e4-419c-bd56-2c2ba87b04ea.png)
+
 
 
 ### 2. Golden ticket
@@ -47,10 +49,8 @@ Sơ đồ tấn công.
 - Detect:
 ```
 Fake/blank acount name
+4768: A Kerberos authentication Ticket Requested ( TGT ) -> 
 ```
-
-![image](https://user-images.githubusercontent.com/91442807/233650183-2ceac33f-00c3-4f08-9190-e8b523a55887.png)
-
 
 
 ### 3. AS-REP Roasting
@@ -78,4 +78,10 @@ Attacker (lúc này đã được xem như `domain user` hợp lệ), yêu cầu
 Domain user yêu cầu một số lượng lớn service ticket (eventID 4769).
 Phân tích gói TGS-REQ trong Windows Event Logs để tìm các hành vi đáng ngờ (như RC4).
 ```
+
+### 5. Pass the ticket
+Attacker lấy `TGT` từ `LSASS memory` từ máy này rồi đem nó dùng lên máy khác (cùng môi trường) để yêu cầu TGS để truy cập vô service.
+
+- Detect:
+- 
 
