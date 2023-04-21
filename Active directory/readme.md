@@ -49,7 +49,7 @@ Sơ đồ tấn công.
 - Detect:
 ```
 Fake/blank acount name
-4768: A Kerberos authentication Ticket Requested ( TGT ) -> 
+4768: A Kerberos authentication Ticket Requested ( TGT ) -> sẽ không có cái này vì attacker không cần request 
 ```
 
 
@@ -83,5 +83,6 @@ Phân tích gói TGS-REQ trong Windows Event Logs để tìm các hành vi đán
 Attacker lấy `TGT` từ `LSASS memory` từ máy này rồi đem nó dùng lên máy khác (cùng môi trường) để yêu cầu TGS để truy cập vô service.
 
 - Detect:
-- 
+
+`4770 – A Kerberos service ticket was renewed`
 
