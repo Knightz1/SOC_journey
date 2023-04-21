@@ -24,6 +24,13 @@ Sơ đồ mô tả cách tấn công:
 
 ![image](https://user-images.githubusercontent.com/91442807/233393185-439d77aa-71b0-4aaa-93b3-c59a50c15640.png)
 
+- Detect:
+```
+Ticket Encryption type = 0x17 
+Ticket options = 0x40810000
+```
+![image](https://user-images.githubusercontent.com/91442807/233650263-3f229438-03e4-419c-bd56-2c2ba87b04ea.png)
+
 
 ### 2. Golden ticket
 
@@ -36,6 +43,14 @@ Giả mạo TGT(Ticket-Granting Ticket)
 Sơ đồ tấn công.
 
 ![image](https://user-images.githubusercontent.com/91442807/233398079-152b9e09-4aa7-4444-ae35-f9e82897a8b4.png)
+
+- Detect:
+```
+Fake/blank acount name
+```
+
+![image](https://user-images.githubusercontent.com/91442807/233650183-2ceac33f-00c3-4f08-9190-e8b523a55887.png)
+
 
 
 ### 3. AS-REP Roasting
@@ -50,4 +65,17 @@ Dù sao trong trường hợp nó bị tắt:
 ![image](https://user-images.githubusercontent.com/91442807/233421281-e5afc358-ccf8-48f5-8957-fae957162b02.png)
 
 - Khi lấy được `KRB_AS_REP` thì attacker có thể lấy password của user dựa trên phần encrypt (bằng brute force,....)
+
+### 4. Kerberoasting
+
+Attacker (lúc này đã được xem như `domain user` hợp lệ), yêu cầu `Kerberos service ticket` cho bất kì dịch vụ nào, lấy được `TGS` từ bộ nhớ và crack được thông tin tài khoản sử dụng các công cụ có sẵn.
+
+- Theo thiết kế của Kerberos, `TGS` sẽ được mã hóa bằng `NTLM hash của service account` mà `service account` là `domain user account` và `host user account`.
+- Kerberoasting chỉ có tác dụng với `domain user` bởi vì mật khẩu của `host user` có độ dài 128 kí tự và đổi mỗi 30 ngày -> rất khó để crack.
+
+- Detect:
+```
+Domain user yêu cầu một số lượng lớn service ticket (eventID 4769).
+Phân tích gói TGS-REQ trong Windows Event Logs để tìm các hành vi đáng ngờ (như RC4).
+```
 
