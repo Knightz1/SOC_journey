@@ -1,2 +1,2 @@
-IP -> DeviceNetworkEvents
-MD5/SHA256 -> DeviceFileEvents
+IP -> DeviceNetworkEvents.
+MD5/SHA256 -> DeviceFileEvents.
