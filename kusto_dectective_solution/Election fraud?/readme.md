@@ -28,7 +28,7 @@ Kiểm tra số lượt bầu tại từng thời điểm của mỗi địa ch�
    <img width="400" height="400" src="https://user-images.githubusercontent.com/91442807/236640514-0f711cc1-8154-40cc-b12b-361137688cf4.png" />
 </p>
 
-- Ta sẽ lọc những phiếu bầu không hợp lệ và loại bỏ nó và chỉ ra dùng `series_decompose_anomalies` (những con số bất thường sẽ hiện thì là số 1)
+- Ta sẽ lọc những phiếu bầu không hợp lệ và chỉ ra dùng `series_decompose_anomalies` (những con số bất thường sẽ hiện thì là số 1)
 
 <p align="center">
    <img width="400" height="400" src="https://user-images.githubusercontent.com/91442807/236640129-e2b8befb-ee25-4bba-a1d7-71476fcbaac6.png" />
