@@ -18,7 +18,7 @@ Mỗi quyển sách có `rfid` riêng và người ta tìm thấy `rfid` của c
 - Hướng làm:
 Xem thử 10 dòng dữ liệu đầu của `Shelves`:
 <p align="center">
- <img width="400", height="400" src="https://user-images.githubusercontent.com/91442807/236636804-d2fb7e6a-8551-4a97-8e9c-591875bcade3.png"/>
+ <img width="500", height="300" src="https://user-images.githubusercontent.com/91442807/236636804-d2fb7e6a-8551-4a97-8e9c-591875bcade3.png"/>
 </p>
 
 
