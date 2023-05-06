@@ -39,7 +39,7 @@ Vậy để tìm ra kệ ta cần liệt kê các cuốn sách có trong kệ r�
 Tiếp đến ta kết hợp với bảng `Books` dựa trên `rfid` để lấy `weight_gram` của từng quyển dùng lệnh `join`:
 
 <p align="center">
- <img src="https://user-images.githubusercontent.com/91442807/236637393-7c9fc4cf-be9e-4d0a-ad78-b2dbf9935561.png"/>
+ <img width="400" height="400" src="https://user-images.githubusercontent.com/91442807/236637393-7c9fc4cf-be9e-4d0a-ad78-b2dbf9935561.png"/>
 </p>
 
 Tiếp đến là cộng khối lượng từng quyển trên mỗi kệ lại dùng lệnh `summarize`:
