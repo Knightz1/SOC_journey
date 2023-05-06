@@ -17,7 +17,10 @@ Mỗi quyển sách có `rfid` riêng và người ta tìm thấy `rfid` của c
 
 - Hướng làm:
 Xem thử 10 dòng dữ liệu đầu của `Shelves`:
-![image](https://user-images.githubusercontent.com/91442807/236636804-d2fb7e6a-8551-4a97-8e9c-591875bcade3.png)
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/91442807/236636804-d2fb7e6a-8551-4a97-8e9c-591875bcade3.png"/>
+</p>
+
 
 Ta thấy ở cột `rfids` chứa các `rfid` của các quyển sách trong kệ đó và `total_weigth` là tổng khối lượng của các quyển sách trong kệ.
 
