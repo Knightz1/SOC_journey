@@ -45,13 +45,13 @@ Tiếp đến ta kết hợp với bảng `Books` dựa trên `rfid` để lấy
 Tiếp đến là cộng khối lượng từng quyển trên mỗi kệ lại dùng lệnh `summarize`:
 
 <p align="center">
- <img src="https://user-images.githubusercontent.com/91442807/236637504-b22d80b9-26bb-476b-abdb-ecf19da4a3bb.png"/>
+ <img width="400", height="400" src="https://user-images.githubusercontent.com/91442807/236637504-b22d80b9-26bb-476b-abdb-ecf19da4a3bb.png"/>
 </p>
 
 Tiếp đến là tiến hành so sánh xem kệ này có weight bị lệch nhiều nhất:
 
 <p align="center">
- <img src="https://user-images.githubusercontent.com/91442807/236637635-1884d855-3c3d-4b90-9a26-001f869c5fc9.png"/>
+ <img width="400", height="400" src="https://user-images.githubusercontent.com/91442807/236637635-1884d855-3c3d-4b90-9a26-001f869c5fc9.png"/>
 </p>
 
 Ta được kết quả là kệ `4242`
