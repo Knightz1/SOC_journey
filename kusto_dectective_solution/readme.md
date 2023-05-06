@@ -3,7 +3,7 @@ Link challenges: https://detective.kusto.io/inbox
 ## 1. The rarest book is missing!
 
 - Mô tả: 
-- 
+
 Có 2 bảng data là `Books` và `Shelves`:
 <p align="center">
 <src=![image](https://user-images.githubusercontent.com/91442807/236636652-c92bd703-98dc-45ee-aa43-208645c8459a.png)>
