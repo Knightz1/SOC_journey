@@ -6,7 +6,7 @@ Link challenges: https://detective.kusto.io/inbox
 
 Có 2 bảng data là `Books` và `Shelves`:
 <p align="center">
- <img src="![image](https://user-images.githubusercontent.com/91442807/236636652-c92bd703-98dc-45ee-aa43-208645c8459a.png)">
+ <img src="![image](https://user-images.githubusercontent.com/91442807/236636652-c92bd703-98dc-45ee-aa43-208645c8459a.png)"/>
 </p>
 
 <p align="center">
