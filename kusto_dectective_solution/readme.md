@@ -30,13 +30,17 @@ Vậy để tìm ra kệ ta cần liệt kê các cuốn sách có trong kệ r�
 
 Để liệt kê từng quyển trong mỗi kệ, ta dùng lệnh `mv_expand`:
 
-![image](https://user-images.githubusercontent.com/91442807/236637208-c309ccf1-5f84-43b0-b93c-d73ca4f51d10.png)
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/91442807/236637208-c309ccf1-5f84-43b0-b93c-d73ca4f51d10.png"/>
+</p>
 
 Ở trên liệt kê ra từng `rfid` của từng quyển trên kệ `1395`.
 
 Tiếp đến ta kết hợp với bảng `Books` dựa trên `rfid` để lấy `weight_gram` của từng quyển dùng lệnh `join`:
 
-![image](https://user-images.githubusercontent.com/91442807/236637393-7c9fc4cf-be9e-4d0a-ad78-b2dbf9935561.png)
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/91442807/236637393-7c9fc4cf-be9e-4d0a-ad78-b2dbf9935561.png"/>
+</p>
 
 Tiếp đến là cộng khối lượng từng quyển trên mỗi kệ lại dùng lệnh `summarize`:
 
