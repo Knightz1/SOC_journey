@@ -31,7 +31,7 @@ Vậy để tìm ra kệ ta cần liệt kê các cuốn sách có trong kệ r�
 Để liệt kê từng quyển trong mỗi kệ, ta dùng lệnh `mv_expand`:
 
 <p align="center">
- <img src="https://user-images.githubusercontent.com/91442807/236637208-c309ccf1-5f84-43b0-b93c-d73ca4f51d10.png"/>
+ <img width="400", height="400" src="https://user-images.githubusercontent.com/91442807/236637208-c309ccf1-5f84-43b0-b93c-d73ca4f51d10.png"/>
 </p>
 
 Ở trên liệt kê ra từng `rfid` của từng quyển trên kệ `1395`.
