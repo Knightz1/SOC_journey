@@ -6,11 +6,11 @@ Link challenges: https://detective.kusto.io/inbox
 
 Có 2 bảng data là `Books` và `Shelves`:
 <p align="center">
-<src="![image](https://user-images.githubusercontent.com/91442807/236636652-c92bd703-98dc-45ee-aa43-208645c8459a.png)">
+<img src="![image](https://user-images.githubusercontent.com/91442807/236636652-c92bd703-98dc-45ee-aa43-208645c8459a.png)">
 </p>
 
 <p align="center">
-<src="![image](https://user-images.githubusercontent.com/91442807/236636661-c91e8b73-18e8-4336-b76b-0cd50e9111bc.png)">
+<img src="![image](https://user-images.githubusercontent.com/91442807/236636661-c91e8b73-18e8-4336-b76b-0cd50e9111bc.png)">
  </p>
 
 Mỗi quyển sách có `rfid` riêng và người ta tìm thấy `rfid` của cuốn `De Revolutionibus Magnis Data` trên sàn. Nhiệm vụ là tìm kệ sách để trả quyển sách này về kệ đúng.
