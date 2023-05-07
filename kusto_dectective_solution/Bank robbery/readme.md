@@ -18,6 +18,18 @@ Ta biết được thời gian vụ cướp là từ `8h17-8h31` và thời gian
   <img width="400" height="400" src="https://user-images.githubusercontent.com/91442807/236668410-8d1325bf-ba04-4849-9ef3-fc8664831266.png"/>
 </p>
 
+Tiếp đến là `join` kết quả với bảng `Traffic` để lấy hết tất cả luồn di chuyển của các phương tiện đó trong khoảng từ `8h-11h`. Sau đó lọc ra thời gian cuối cùng của phương tiện đó được lưu:
+
+<p align="center">
+  <img width="400" height="400" src="https://user-images.githubusercontent.com/91442807/236668859-60cd4e9c-0c2d-4ef6-9bbd-eda01d79c533.png"/>
+</p>
+
+Sau đó `join` lần nữa với bảng `Traffic` để lấy thông tin về địa chỉ của phương tiện ở lần cuối cùng đó rồi lọc tiếp ở mỗi địa chỉ có bao nhiêu phương tiện vì cuối cùng 3 tên cướp sẽ tụ lại với nhau ta được:
+
+<p align="center">
+  <img width="400" height="400" src="https://user-images.githubusercontent.com/91442807/236669089-e3fe10c9-2816-44f3-82e6-a5adb6800a66.png"/>
+</p>
+
 
 
 
