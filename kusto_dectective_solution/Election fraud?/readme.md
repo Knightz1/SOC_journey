@@ -35,5 +35,7 @@ Kiểm tra số lượt bầu tại từng thời điểm của mỗi địa ch�
 </p>
 
 Kết quả:
-![image](https://user-images.githubusercontent.com/91442807/236641572-e7b6dd4d-2b31-451b-8214-efdd19c78165.png)
 
+<p align="center">
+   <img width="400" height="400" src="https://user-images.githubusercontent.com/91442807/236641572-e7b6dd4d-2b31-451b-8214-efdd19c78165.png" />
+</p>
