@@ -1,6 +1,6 @@
 ```kql
   SecurityEvent
-  | where EventID == 4657     / a register value was modified
+  | where EventID == 4657     // a register value was modified
   | extend EventData = parse_xml(EventData).EventData.Data
   | mv-expand bagexpansion=array EventData
   | evaluate bag_unpack(EventData)
