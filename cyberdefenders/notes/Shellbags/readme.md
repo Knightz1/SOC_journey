@@ -14,3 +14,6 @@ USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\Bags
 NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU
 NTUSER.DAT\Software\Microsoft\Windows\Shell\Bags
 ```
+
+-> Tìm file `UsrClass.dat` trong thư mục `AppData\Local\Microsoft\Windows\`  
+-> Dùng `rip.exe -r ..\UsrClass.dat -p shellbags`  
