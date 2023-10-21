@@ -1,2 +1,2 @@
 - Normally, `deleted files` in Windows OS creates two files in `C:\$Recycle-Bin\{user_SID}` - one that starts with `$I` and another with `$R`. The `$I file` contains `metadata of the corresponding deleted file including its original path`.  
-- Since the recycle bin `did not contain any $I files` corresponding to $RRP3TBNW.jpg, I assumed the `file may have been restored`
+- Since the recycle bin `did not contain any $I files`, I assumed the `file may have been restored`
